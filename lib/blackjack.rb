@@ -41,6 +41,7 @@ end
 
 def hit?(num)
   # code hit? here
+<<<<<<< HEAD
   card_total = num
   prompt_user
   input = get_user_input
@@ -51,6 +52,18 @@ def hit?(num)
   else 
     invalid_command
     hit?(card_total)
+=======
+  current_sum = num
+  prompt_user
+  if get_user_input == "s"
+    current_sum
+  elsif get_user_input == "h"
+    current_sum += deal_card
+    hit?(current_sum)
+  else 
+    invalid_command
+    hit?(current_sum)
+>>>>>>> 4b6657539e195a334114b0dfad9a65b68570883b
   end
 end
 
